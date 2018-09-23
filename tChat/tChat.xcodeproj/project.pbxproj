@@ -12,6 +12,7 @@
 		199EA439215815260034534F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA437215815260034534F /* Main.storyboard */; };
 		199EA43B215815280034534F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43A215815280034534F /* Assets.xcassets */; };
 		199EA43E215815280034534F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43C215815280034534F /* LaunchScreen.storyboard */; };
+		199EA447215834CD0034534F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA446215834CD0034534F /* HelperFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		199EA43A215815280034534F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		199EA43D215815280034534F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199EA43F215815280034534F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199EA446215834CD0034534F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		199EA432215815260034534F /* tChat */ = {
 			isa = PBXGroup;
 			children = (
+				199EA445215834A80034534F /* Helpers */,
 				199EA433215815260034534F /* AppDelegate.swift */,
 				199EA435215815260034534F /* ViewController.swift */,
 				199EA437215815260034534F /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				199EA43F215815280034534F /* Info.plist */,
 			);
 			path = tChat;
+			sourceTree = "<group>";
+		};
+		199EA445215834A80034534F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				199EA446215834CD0034534F /* HelperFunctions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				199EA436215815260034534F /* ViewController.swift in Sources */,
 				199EA434215815260034534F /* AppDelegate.swift in Sources */,
+				199EA447215834CD0034534F /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
