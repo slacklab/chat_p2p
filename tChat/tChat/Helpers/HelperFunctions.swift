@@ -11,22 +11,20 @@ import UIKit
 
 class Logger {
    
-    func printAppStateChanged(prevState: String, currentState: String, methodName: String) {
-    #if DEBUG
-        print("I'm running in DEBUG mode")
+    func printLog(bufferState: UIApplicationState, currentState: UIApplicationState) {
+        #if DEBUG
+    
         let currentState = UIApplication.shared.applicationState
-
-        
-        print("Application moved from <стейт из которого переходим = \(prevState)>, to <стейт в который переходим = \(currentState)>: <здесь название метода = \(methodName)>")
+        print("Application moved from <\(bufferState.parseToString())>, to <\(currentState.parseToString())>: ")
+        _ = UIApplication.shared.applicationState
     
-    
-    #else
-   // print("I'm running in a non-DEBUG mode")
-    
-    
-    #endif
+        #else
+        #endif
     }
     
 }
+    
+
+
 
 

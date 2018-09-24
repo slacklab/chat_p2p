@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192C186F2159275B00EE3EA6 /* UIApplicationStateParseToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */; };
 		199EA434215815260034534F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA433215815260034534F /* AppDelegate.swift */; };
 		199EA436215815260034534F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA435215815260034534F /* ViewController.swift */; };
 		199EA439215815260034534F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA437215815260034534F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationStateParseToString.swift; sourceTree = "<group>"; };
 		199EA430215815260034534F /* tChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EA433215815260034534F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199EA435215815260034534F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				199EA446215834CD0034534F /* HelperFunctions.swift */,
+				192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192C186F2159275B00EE3EA6 /* UIApplicationStateParseToString.swift in Sources */,
 				199EA436215815260034534F /* ViewController.swift in Sources */,
 				199EA434215815260034534F /* AppDelegate.swift in Sources */,
 				199EA447215834CD0034534F /* HelperFunctions.swift in Sources */,
