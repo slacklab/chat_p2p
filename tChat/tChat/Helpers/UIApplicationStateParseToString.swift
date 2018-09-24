@@ -14,9 +14,9 @@ extension UIApplicationState {
     func parseToString() -> String {
         switch self {
         case .active:
-            return "Active: (receiving events)"
+            return "Active"
         case .inactive:
-            return "Inactive: (is not receiving events)"
+            return "Inactive"
         case .background:
             return "Background"
         }
