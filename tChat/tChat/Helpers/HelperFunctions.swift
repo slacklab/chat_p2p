@@ -11,13 +11,22 @@ import UIKit
 
 class Logger {
    
-    func printLog(bufferState: UIApplicationState, currentState: UIApplicationState) {
+    static var previousState = UIApplication.shared.applicationState
+    class func printStateWithFunction(_ function: String) {
+   
         #if DEBUG
-    
         let currentState = UIApplication.shared.applicationState
-        print("Application moved from <\(bufferState.parseToString())>, to <\(currentState.parseToString())>: ")
-        _ = UIApplication.shared.applicationState
+        print("Application moved from <\(previousState.parseToString())>, to <\(currentState.parseToString())>: \(function)\n")
+
+        previousState = currentState
+        #else
+        #endif
+    }
     
+    class func printViewLifeCycle(_ function: String) {
+        
+        #if DEBUG
+        print("\(function)\n")
         #else
         #endif
     }
