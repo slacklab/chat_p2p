@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIApplicationState {
+extension UIApplication.State {
     
     func parseToString() -> String {
         switch self {
