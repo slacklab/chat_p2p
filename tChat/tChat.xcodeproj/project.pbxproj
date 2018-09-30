@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192C186F2159275B00EE3EA6 /* UIApplicationStateParseToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */; };
 		199EA434215815260034534F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA433215815260034534F /* AppDelegate.swift */; };
 		199EA436215815260034534F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA435215815260034534F /* ViewController.swift */; };
 		199EA439215815260034534F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA437215815260034534F /* Main.storyboard */; };
 		199EA43B215815280034534F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43A215815280034534F /* Assets.xcassets */; };
 		199EA43E215815280034534F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43C215815280034534F /* LaunchScreen.storyboard */; };
+		199EA447215834CD0034534F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA446215834CD0034534F /* HelperFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationStateParseToString.swift; sourceTree = "<group>"; };
 		199EA430215815260034534F /* tChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EA433215815260034534F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199EA435215815260034534F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		199EA43A215815280034534F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		199EA43D215815280034534F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199EA43F215815280034534F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199EA446215834CD0034534F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		199EA432215815260034534F /* tChat */ = {
 			isa = PBXGroup;
 			children = (
+				199EA445215834A80034534F /* Helpers */,
 				199EA433215815260034534F /* AppDelegate.swift */,
 				199EA435215815260034534F /* ViewController.swift */,
 				199EA437215815260034534F /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				199EA43F215815280034534F /* Info.plist */,
 			);
 			path = tChat;
+			sourceTree = "<group>";
+		};
+		199EA445215834A80034534F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				199EA446215834CD0034534F /* HelperFunctions.swift */,
+				192C186E2159275B00EE3EA6 /* UIApplicationStateParseToString.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,7 @@
 				TargetAttributes = {
 					199EA42F215815260034534F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192C186F2159275B00EE3EA6 /* UIApplicationStateParseToString.swift in Sources */,
 				199EA436215815260034534F /* ViewController.swift in Sources */,
 				199EA434215815260034534F /* AppDelegate.swift in Sources */,
+				199EA447215834CD0034534F /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,14 +300,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				INFOPLIST_FILE = tChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.tChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -302,14 +319,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				INFOPLIST_FILE = tChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.tChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
