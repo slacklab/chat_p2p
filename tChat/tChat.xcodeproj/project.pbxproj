@@ -14,6 +14,7 @@
 		199EA43B215815280034534F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43A215815280034534F /* Assets.xcassets */; };
 		199EA43E215815280034534F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199EA43C215815280034534F /* LaunchScreen.storyboard */; };
 		199EA447215834CD0034534F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA446215834CD0034534F /* HelperFunctions.swift */; };
+		19A487472162B8D8000F4EE8 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A487462162B8D8000F4EE8 /* CameraHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		199EA43D215815280034534F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199EA43F215815280034534F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199EA446215834CD0034534F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		19A487462162B8D8000F4EE8 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				199EA446215834CD0034534F /* HelperFunctions.swift */,
 				192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */,
+				19A487462162B8D8000F4EE8 /* CameraHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				192C186F2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift in Sources */,
+				19A487472162B8D8000F4EE8 /* CameraHandler.swift in Sources */,
 				199EA436215815260034534F /* ProfileViewController.swift in Sources */,
 				199EA434215815260034534F /* AppDelegate.swift in Sources */,
 				199EA447215834CD0034534F /* HelperFunctions.swift in Sources */,

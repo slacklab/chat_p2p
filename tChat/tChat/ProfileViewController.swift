@@ -17,6 +17,12 @@ class ProfileViewController: UIViewController {
     
     @IBAction func addPhotoButtonPressed(_ sender: Any) {
         print("Выбери изображение профиля")
+        
+        CameraHandler.shared.showActionSheet(vc: self)
+        CameraHandler.shared.imagePickedBlock = { (image) in
+            self.imgPlaceholderUser.contentMode = .scaleAspectFit
+            self.imgPlaceholderUser.image = image
+        }
     }
     
     
