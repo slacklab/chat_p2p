@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
         
         CameraHandler.shared.showActionSheet(vc: self)
         CameraHandler.shared.imagePickedBlock = { (image) in
-            self.imgPlaceholderUser.contentMode = .scaleAspectFit
+            self.imgPlaceholderUser.contentMode = .scaleAspectFill
             self.imgPlaceholderUser.image = image
         }
     }
