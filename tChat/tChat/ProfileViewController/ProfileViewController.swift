@@ -25,6 +25,10 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -105,8 +109,5 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    
-    
 }
 
