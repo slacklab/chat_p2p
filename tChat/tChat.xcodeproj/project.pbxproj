@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1913F53A2173C75500051653 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1913F5392173C75500051653 /* ThemesViewController.m */; };
+		1913F53C2173C85300051653 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1913F53B2173C85300051653 /* Themes.m */; };
 		192C186F2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */; };
 		199EA434215815260034534F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA433215815260034534F /* AppDelegate.swift */; };
 		199EA436215815260034534F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA435215815260034534F /* ProfileViewController.swift */; };
@@ -22,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1913F5352173C4ED00051653 /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; };
+		1913F5372173C66900051653 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
+		1913F5382173C75500051653 /* tChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		1913F5392173C75500051653 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
+		1913F53B2173C85300051653 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
 		192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationState+ParseToString.swift"; sourceTree = "<group>"; };
 		199EA430215815260034534F /* tChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EA433215815260034534F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1913F5342173C4B000051653 /* ThemesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1913F5352173C4ED00051653 /* ThemesViewController.h */,
+				1913F5372173C66900051653 /* Themes.h */,
+				1913F5392173C75500051653 /* ThemesViewController.m */,
+				1913F5382173C75500051653 /* tChat-Bridging-Header.h */,
+				1913F53B2173C85300051653 /* Themes.m */,
+			);
+			path = ThemesViewController;
+			sourceTree = "<group>";
+		};
 		19442FEF216AB88D0022B434 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +95,7 @@
 		199EA432215815260034534F /* tChat */ = {
 			isa = PBXGroup;
 			children = (
+				1913F5342173C4B000051653 /* ThemesViewController */,
 				19442FEF216AB88D0022B434 /* ProfileViewController */,
 				19D01E05216AB21E0058E28B /* ConversationViewController */,
 				19D01E03216AB0380058E28B /* ConversationsListViewController */,
@@ -190,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				192C186F2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift in Sources */,
+				1913F53C2173C85300051653 /* Themes.m in Sources */,
 				19A487472162B8D8000F4EE8 /* CameraHandler.swift in Sources */,
+				1913F53A2173C75500051653 /* ThemesViewController.m in Sources */,
 				19D01E0D216AB4AE0058E28B /* ConversationsListCell.swift in Sources */,
 				199EA436215815260034534F /* ProfileViewController.swift in Sources */,
 				19D01E07216AB3090058E28B /* ConversationCell.swift in Sources */,
@@ -341,6 +363,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				INFOPLIST_FILE = tChat/Info.plist;
@@ -351,6 +375,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.tChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tChat/ThemesViewController/tChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -360,6 +386,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX8VPR967D;
 				INFOPLIST_FILE = tChat/Info.plist;
@@ -370,6 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.tChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tChat/ThemesViewController/tChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
