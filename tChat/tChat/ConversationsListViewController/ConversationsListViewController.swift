@@ -118,6 +118,7 @@ class ConversationsListViewController: UITableViewController {
     
     
     func generateConversations() {
+ 
         // For Online users
         
         for itemName in 0 ..< namesArray.count {
@@ -148,13 +149,12 @@ class ConversationsListViewController: UITableViewController {
         // For Without Name
         сellsMessagesOnline.append(MessageManager(currentMessage: messagesArray[0], currentDate: dateArray[0], currentOnline: true, currentHasUnreadMessage: true))
         
-        
         //MARK: special cases for Offline
         
         // If incoming message does not exist -> no messages yet
         сellsMessagesOffline.append(MessageManager(currentName: namesArray[1], currentDate: dateArray[1], currentOnline: false, currentHasUnreadMessage: false))
         
-        // For Read messages -> standart font
+        // For Read messages -> standart 
         сellsMessagesOffline.append(MessageManager(currentName: namesArray[1], currentMessage: messagesArray[1], currentDate: dateArray[1], currentOnline: false, currentHasUnreadMessage: false))
         
         // For Without Name
