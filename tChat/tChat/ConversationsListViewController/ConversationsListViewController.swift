@@ -110,6 +110,7 @@ class ConversationsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         generateConversations()
  
@@ -118,6 +119,9 @@ class ConversationsListViewController: UITableViewController {
     
     
     func generateConversations() {
+=======
+ 
+>>>>>>> 38304ecdf25e22daf7fd0bd0c4a16ceb0d8bb5f2
         // For Online users
         
         for itemName in 0 ..< namesArray.count {
@@ -142,19 +146,31 @@ class ConversationsListViewController: UITableViewController {
         // If incoming message does not exist -> no messages yet
         сellsMessagesOnline.append(MessageManager(currentName: namesArray[0], currentDate: dateArray[0], currentOnline: true, currentHasUnreadMessage: false))
         
+<<<<<<< HEAD
         // For Unread messages -> bold font
+=======
+        // For Unread messages -> bold fond
+>>>>>>> 38304ecdf25e22daf7fd0bd0c4a16ceb0d8bb5f2
         сellsMessagesOnline.append(MessageManager(currentName: namesArray[0], currentMessage: messagesArray[0], currentDate: dateArray[0], currentOnline: true, currentHasUnreadMessage: true))
         
         // For Without Name
         сellsMessagesOnline.append(MessageManager(currentMessage: messagesArray[0], currentDate: dateArray[0], currentOnline: true, currentHasUnreadMessage: true))
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 38304ecdf25e22daf7fd0bd0c4a16ceb0d8bb5f2
         
         //MARK: special cases for Offline
         
         // If incoming message does not exist -> no messages yet
         сellsMessagesOffline.append(MessageManager(currentName: namesArray[1], currentDate: dateArray[1], currentOnline: false, currentHasUnreadMessage: false))
         
+<<<<<<< HEAD
         // For Read messages -> standart font
+=======
+        // For Read messages -> standart fond
+>>>>>>> 38304ecdf25e22daf7fd0bd0c4a16ceb0d8bb5f2
         сellsMessagesOffline.append(MessageManager(currentName: namesArray[1], currentMessage: messagesArray[1], currentDate: dateArray[1], currentOnline: false, currentHasUnreadMessage: false))
         
         // For Without Name
