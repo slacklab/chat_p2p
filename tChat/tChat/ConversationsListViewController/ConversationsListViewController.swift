@@ -53,7 +53,23 @@ let namesArray: [String] = ["Ivan Sorokoletov", "", "LooooooooooooooooongNaaaaaa
 let messagesArray = ["Looooooooonnnngggg teeeeexttttttttttttttttttttttt", "Emoji 🎾"]
 let dateArray = [ Date(), Date(timeIntervalSinceReferenceDate: 111111111)]
 
-class ConversationsListViewController: UITableViewController {
+class ConversationsListViewController: UITableViewController, ThemesViewControllerDelegate {
+    
+    
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        print("into protocol")
+        logThemeChanging(selectedTheme: selectedTheme)
+
+    }
+    
+    func logThemeChanging(selectedTheme: UIColor) {
+        #if DEBUG
+        print("Test")
+        print("Now Theme is \(selectedTheme)")
+        #endif
+    }
+      
+    
     var сellsMessagesOnline = [MessageManager]()
     var сellsMessagesOffline = [MessageManager]()
     
@@ -115,6 +131,9 @@ class ConversationsListViewController: UITableViewController {
  
         
     }
+    
+
+    
     
     
     func generateConversations() {
