@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1913F53A2173C75500051653 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1913F5392173C75500051653 /* ThemesViewController.m */; };
 		1913F53C2173C85300051653 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1913F53B2173C85300051653 /* Themes.m */; };
+		1913F544217D08B900051653 /* ProfileDataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F543217D08B900051653 /* ProfileDataSaver.swift */; };
+		1913F546217D08E700051653 /* ProfileDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F545217D08E700051653 /* ProfileDataLoader.swift */; };
+		1913F548217D0A6600051653 /* ProfileOperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F547217D0A6600051653 /* ProfileOperationDataManager.swift */; };
+		1913F54A217D0BA000051653 /* ProfileGCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F549217D0BA000051653 /* ProfileGCDDataManager.swift */; };
+		1913F54C217D0D0A00051653 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F54B217D0D0A00051653 /* ProfileData.swift */; };
+		1913F54F217D0D9400051653 /* ProfileDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F54E217D0D9400051653 /* ProfileDataHandler.swift */; };
+		1913F551217D0DF500051653 /* ProfileDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913F550217D0DF500051653 /* ProfileDataManagerProtocol.swift */; };
 		192C186F2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */; };
 		199EA434215815260034534F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA433215815260034534F /* AppDelegate.swift */; };
 		199EA436215815260034534F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EA435215815260034534F /* ProfileViewController.swift */; };
@@ -29,6 +36,13 @@
 		1913F5382173C75500051653 /* tChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		1913F5392173C75500051653 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
 		1913F53B2173C85300051653 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
+		1913F543217D08B900051653 /* ProfileDataSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSaver.swift; sourceTree = "<group>"; };
+		1913F545217D08E700051653 /* ProfileDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataLoader.swift; sourceTree = "<group>"; };
+		1913F547217D0A6600051653 /* ProfileOperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOperationDataManager.swift; sourceTree = "<group>"; };
+		1913F549217D0BA000051653 /* ProfileGCDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGCDDataManager.swift; sourceTree = "<group>"; };
+		1913F54B217D0D0A00051653 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		1913F54E217D0D9400051653 /* ProfileDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataHandler.swift; sourceTree = "<group>"; };
+		1913F550217D0DF500051653 /* ProfileDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManagerProtocol.swift; sourceTree = "<group>"; };
 		192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationState+ParseToString.swift"; sourceTree = "<group>"; };
 		199EA430215815260034534F /* tChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EA433215815260034534F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,34 @@
 				1913F53B2173C85300051653 /* Themes.m */,
 			);
 			path = ThemesViewController;
+			sourceTree = "<group>";
+		};
+		1913F53D217D07B600051653 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				1913F543217D08B900051653 /* ProfileDataSaver.swift */,
+				1913F545217D08E700051653 /* ProfileDataLoader.swift */,
+				1913F547217D0A6600051653 /* ProfileOperationDataManager.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		1913F53E217D07C000051653 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				1913F549217D0BA000051653 /* ProfileGCDDataManager.swift */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		1913F54D217D0D5600051653 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1913F54B217D0D0A00051653 /* ProfileData.swift */,
+				1913F54E217D0D9400051653 /* ProfileDataHandler.swift */,
+				1913F550217D0DF500051653 /* ProfileDataManagerProtocol.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		19442FEF216AB88D0022B434 /* ProfileViewController */ = {
@@ -112,6 +154,9 @@
 		199EA445215834A80034534F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1913F54D217D0D5600051653 /* Profile */,
+				1913F53E217D07C000051653 /* GCD */,
+				1913F53D217D07B600051653 /* Operations */,
 				199EA446215834CD0034534F /* HelperFunctions.swift */,
 				192C186E2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift */,
 				19A487462162B8D8000F4EE8 /* CameraHandler.swift */,
@@ -209,17 +254,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1913F551217D0DF500051653 /* ProfileDataManagerProtocol.swift in Sources */,
+				1913F546217D08E700051653 /* ProfileDataLoader.swift in Sources */,
 				192C186F2159275B00EE3EA6 /* UIApplicationState+ParseToString.swift in Sources */,
 				1913F53C2173C85300051653 /* Themes.m in Sources */,
 				19A487472162B8D8000F4EE8 /* CameraHandler.swift in Sources */,
 				1913F53A2173C75500051653 /* ThemesViewController.m in Sources */,
+				1913F54F217D0D9400051653 /* ProfileDataHandler.swift in Sources */,
 				19D01E0D216AB4AE0058E28B /* ConversationsListCell.swift in Sources */,
+				1913F544217D08B900051653 /* ProfileDataSaver.swift in Sources */,
+				1913F54C217D0D0A00051653 /* ProfileData.swift in Sources */,
 				199EA436215815260034534F /* ProfileViewController.swift in Sources */,
 				19D01E07216AB3090058E28B /* ConversationCell.swift in Sources */,
 				19D01E0B216AB4790058E28B /* ConversationsListViewController.swift in Sources */,
 				199EA434215815260034534F /* AppDelegate.swift in Sources */,
 				199EA447215834CD0034534F /* HelperFunctions.swift in Sources */,
 				19D01E09216AB31E0058E28B /* ConversationViewController.swift in Sources */,
+				1913F548217D0A6600051653 /* ProfileOperationDataManager.swift in Sources */,
+				1913F54A217D0BA000051653 /* ProfileGCDDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
