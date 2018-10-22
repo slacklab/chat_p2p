@@ -144,7 +144,7 @@ class ProfileViewController: UIViewController {
             nameTextField.text = profileData.name
             descTextField.text = profileData.desc
             nameLabel.text = profileData.name
-            nameLabel.text = profileData.desc
+            descLabel.text = profileData.desc
             imgPlaceholderUser.image = profileData.image ?? UIImage(named: "placeholder-user")
         }
     }
@@ -238,7 +238,7 @@ class ProfileViewController: UIViewController {
             handleTextFieldsNewData()
         }
     }
-
+    
     
     
     
@@ -393,7 +393,7 @@ class ProfileViewController: UIViewController {
     private func dismissScreen() {
         dismiss(animated: true, completion: nil)
     }
-
+    
 }
 
 
@@ -419,7 +419,7 @@ extension ProfileViewController: UITextFieldDelegate {
     }
     
     private func handleTextFieldsNewData() {
-    
+        
         if profileData.name != nameTextField.text {
             
             if let text = nameTextField.text, text != "" {
