@@ -33,6 +33,8 @@ class ConversationCell: UITableViewCell {
         }
     }
     
+
+    
     var message: String? {
         didSet {
             if let factLastMessage = message {

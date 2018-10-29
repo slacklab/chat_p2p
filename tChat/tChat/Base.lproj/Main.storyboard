@@ -18,16 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="694-ww-Ine">
+                            <rect key="frame" x="0.0" y="300" width="320" height="305"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Poy-i2-QIv">
+                                    <rect key="frame" x="8" y="223" width="148.5" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="sendMessageTFTapped:" destination="lOi-nu-dmL" eventType="editingDidEnd" id="8hl-xR-Phb"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKh-EE-bhq">
+                                    <rect key="frame" x="276" y="223" width="36" height="30"/>
+                                    <state key="normal" title="Send"/>
+                                    <connections>
+                                        <action selector="sendButtonTapped:" destination="lOi-nu-dmL" eventType="touchUpInside" id="h0a-rv-hVy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="mKh-EE-bhq" firstAttribute="leading" secondItem="Poy-i2-QIv" secondAttribute="trailing" constant="119.5" id="Xpc-7p-2UN"/>
+                                <constraint firstAttribute="bottom" secondItem="Poy-i2-QIv" secondAttribute="bottom" constant="52" id="Y0L-WM-HpH"/>
+                                <constraint firstAttribute="trailing" secondItem="mKh-EE-bhq" secondAttribute="trailing" constant="8" id="ZaJ-6k-ad1"/>
+                                <constraint firstAttribute="bottom" secondItem="mKh-EE-bhq" secondAttribute="bottom" constant="52" id="vgQ-lh-Oe6"/>
+                                <constraint firstItem="Poy-i2-QIv" firstAttribute="leading" secondItem="694-ww-Ine" secondAttribute="leading" constant="8" id="xZu-Av-zY7"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncomingMessageCell" rowHeight="76" id="G5O-Uu-Nzf" customClass="MessageCell" customModule="tChat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="76"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncomingMessageCell" rowHeight="217" id="G5O-Uu-Nzf" customClass="MessageCell" customModule="tChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="217"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G5O-Uu-Nzf" id="e8Q-vt-yPD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="216.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incoming Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTI-SL-VFH" userLabel="IncomingMessageLabel">
-                                            <rect key="frame" x="15" y="5" width="143.5" height="65.5"/>
+                                            <rect key="frame" x="15" y="5" width="143.5" height="206.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -50,15 +80,15 @@
                                     <outlet property="textMessageLabel" destination="RTI-SL-VFH" id="FYu-RL-uht"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutcomingMessageCell" rowHeight="76" id="5So-MY-SxH" customClass="MessageCell" customModule="tChat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="104" width="320" height="76"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutcomingMessageCell" rowHeight="55" id="5So-MY-SxH" customClass="MessageCell" customModule="tChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="245" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5So-MY-SxH" id="0XU-zh-4vp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outcomming Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73M-Q6-Z6e" userLabel="OutcomingMessageLabel">
-                                            <rect key="frame" x="132.5" y="5" width="172.5" height="65.5"/>
+                                            <rect key="frame" x="132.5" y="5" width="172.5" height="44.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -88,10 +118,43 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="QMN-YT-xgz"/>
+                    <connections>
+                        <outlet property="sendButton" destination="mKh-EE-bhq" id="b87-Zw-EJf"/>
+                        <outlet property="sendMessageTextField" destination="Poy-i2-QIv" id="ziK-An-aFc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ra7-7f-eiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gIp-e0-aaF">
+                    <rect key="frame" x="0.0" y="0.0" width="302" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvx-sx-d5Z">
+                            <rect key="frame" x="0.0" y="0.0" width="264" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJO-2S-Bwg">
+                            <rect key="frame" x="272" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.1852364205" green="0.65339166370000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="ijy-ok-Bk6"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="send"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dh1-Jm-Sja"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Y4Z-5a-6BC"/>
+                </stackView>
             </objects>
-            <point key="canvasLocation" x="2593" y="125"/>
+            <point key="canvasLocation" x="2591.25" y="124.64788732394366"/>
         </scene>
         <!--ConversationsListViewController-->
         <scene sceneID="RL3-so-wDn">
@@ -431,6 +494,7 @@
     </scenes>
     <resources>
         <image name="placeholder-user" width="600" height="600"/>
+        <image name="send" width="16" height="16"/>
         <image name="slr-camera-2-xxl" width="256" height="256"/>
         <namedColor name="DarkYellowCustom">
             <color red="1" green="0.85000002384185791" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

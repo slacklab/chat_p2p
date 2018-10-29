@@ -37,4 +37,16 @@ class GCDProfileDataManager: ProfileDataManager {
         }
         
     }
+    
+    func getProfile(completion: @escaping (UserInfo) -> Void){
+        DispatchQueue(label: "com.tChat", qos: .userInitiated)
+.async {
+            let name = UserDefaults.standard.string(forKey: "user_name") ?? ""
+    
+            let profile = UserInfo(name: name)
+            DispatchQueue.main.async {
+                completion(profile)
+            }
+        }
+    }
 }
