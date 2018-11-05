@@ -27,3 +27,11 @@ Homework 4:
 Homework 5:
 
 Создание ProfileDataManager и сохранение настроек в UserDefaults, многопоточность
+
+Homework 6: 
+
+Реализация обмена сообщениями между устройствами используя MultiPeerConnectivity
+
+Homework 7: 
+
+Добалено сохранение данных пользователя с помощью CoreData

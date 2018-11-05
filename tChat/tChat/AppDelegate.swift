@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    let coreDataManager: CoreDataManager = CoreDataManager()
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Logger.printStateWithFunction(#function)
@@ -37,6 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
             Logger.printStateWithFunction(#function)
+        
+        if let saveContext = coreDataManager.coreDataStack.saveContext {
+            coreDataManager.coreDataStack.performSave(context: saveContext)
+        }
+        
+        
     }
  
 }

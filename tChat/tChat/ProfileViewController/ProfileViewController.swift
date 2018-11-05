@@ -18,9 +18,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descLabel: UILabel!
     
-    @IBOutlet var buttonGCDProfile: UIButton!
-    @IBOutlet var buttonOperationProfile: UIButton!
+
     @IBOutlet weak var buttonEditProfile: UIButton!
+    
+    @IBOutlet var buttonSaveCoreData: UIButton!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
@@ -84,15 +85,13 @@ class ProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func gcdBtnPressed(_ sender: Any) {
+    
+    @IBAction func saveBtnPressed(_ sender: UIButton) {
         handleTextFieldsNewData()
-        saveProfileData(via: gcdProfileDataManager)
+        saveProfileData(via: profileDataManager)
+
     }
     
-    @IBAction func operationBtnPressed(_ sender: Any) {
-        handleTextFieldsNewData()
-        saveProfileData(via: operationProfileDataManager)
-    }
     
     @IBAction func editBtnPressed(_ sender: Any) {
         isEditingContent = true
@@ -110,8 +109,7 @@ class ProfileViewController: UIViewController {
          */
     }
     
-    private let gcdProfileDataManager = GCDProfileDataManager()
-    private let operationProfileDataManager = OperationProfileDataManager()
+    private let profileDataManager: ProfileDataManager = (UIApplication.shared.delegate as! AppDelegate).coreDataManager
     
     private(set) var isEditingContent: Bool = false {
         
@@ -119,10 +117,8 @@ class ProfileViewController: UIViewController {
             areSaveButtonsEnabled = false
             
             buttonEditProfile.isHidden = isEditingContent
-            
-            buttonOperationProfile.isHidden = !isEditingContent
-            
-            buttonGCDProfile.isHidden = !isEditingContent
+
+            buttonSaveCoreData.isHidden = !isEditingContent
             
             buttonUploadProfilePhoto.isHidden = !isEditingContent
             
@@ -153,8 +149,7 @@ class ProfileViewController: UIViewController {
         get { return profileData.isModified }
         
         set(newValue) {
-            buttonGCDProfile.isEnabled = newValue
-            buttonOperationProfile.isEnabled = newValue
+            buttonSaveCoreData.isEnabled = newValue
         }
     }
     
@@ -175,7 +170,7 @@ class ProfileViewController: UIViewController {
         nameTextField.delegate = self
         descTextField.delegate = self
         
-        restoreProfileData(via: gcdProfileDataManager)
+        restoreProfileData(via: profileDataManager)
         
         activityIndicator.hidesWhenStopped = true
         
@@ -259,22 +254,19 @@ class ProfileViewController: UIViewController {
         buttonEditProfile.layer.cornerRadius = 15
         buttonEditProfile.clipsToBounds = true
         
-        buttonGCDProfile.layer.borderWidth = 2
-        buttonGCDProfile.layer.borderColor = UIColor.black.cgColor
-        buttonGCDProfile.layer.cornerRadius = 15
-        buttonGCDProfile.clipsToBounds = true
+        // For Save button
+        buttonSaveCoreData.layer.borderWidth = 2
+        buttonSaveCoreData.layer.borderColor = UIColor.black.cgColor
+        buttonSaveCoreData.layer.cornerRadius = 15
+        buttonSaveCoreData.clipsToBounds = true
+        buttonSaveCoreData.contentEdgeInsets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         
-        buttonOperationProfile.layer.borderWidth = 2
-        buttonOperationProfile.layer.borderColor = UIColor.black.cgColor
-        buttonOperationProfile.layer.cornerRadius = 15
-        buttonOperationProfile.clipsToBounds = true
+        
     }
     
     
     private func saveProfileData(via manager: ProfileDataManager) {
         
-        self.buttonGCDProfile.isUserInteractionEnabled = false
-        self.buttonOperationProfile.isUserInteractionEnabled = false
         self.activityIndicator.startAnimating()
         
         manager.save(profileData: self.profileData) { [weak self] isSucceeded in
@@ -283,8 +275,7 @@ class ProfileViewController: UIViewController {
                 
                 self?.isEditingContent = false
                 
-                self?.buttonGCDProfile.isUserInteractionEnabled = true
-                self?.buttonOperationProfile.isUserInteractionEnabled = true
+                self?.buttonSaveCoreData.isUserInteractionEnabled = true
                 
                 if isSucceeded {
                     self?.sendSuccessSaveAlert()

@@ -336,16 +336,6 @@
                                     <action selector="editBtnPressed:" destination="bF1-0z-wR5" eventType="touchUpInside" id="cfj-Ik-EBK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPK-gK-Bge" userLabel="GCD">
-                                <rect key="frame" x="16" y="505" width="45" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="GCD">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="gcdBtnPressed:" destination="bF1-0z-wR5" eventType="touchUpInside" id="kWd-5j-ncL"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vll-9g-eti">
                                 <rect key="frame" x="150" y="402" width="20" height="20"/>
                             </activityIndicatorView>
@@ -361,39 +351,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz3-qZ-PHL">
-                                <rect key="frame" x="213" y="505" width="91" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Operation">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nh-9r-EtD">
+                                <rect key="frame" x="134" y="508" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationBtnPressed:" destination="bF1-0z-wR5" eventType="touchUpInside" id="MRO-kf-lvq"/>
+                                    <action selector="saveBtnPressed:" destination="bF1-0z-wR5" eventType="touchUpInside" id="OMJ-Lp-vf5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="75r-gU-J82" secondAttribute="trailing" constant="16" id="1AL-c7-rM1"/>
-                            <constraint firstItem="8pR-ho-xll" firstAttribute="bottom" secondItem="wz3-qZ-PHL" secondAttribute="bottom" constant="25" id="2N1-do-8YJ"/>
+                            <constraint firstItem="4Nh-9r-EtD" firstAttribute="centerX" secondItem="8pR-ho-xll" secondAttribute="centerX" id="6CD-hy-iHO"/>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="vll-9g-eti" secondAttribute="trailing" constant="150" id="7Vd-5X-ISQ"/>
                             <constraint firstItem="zrd-TR-dhd" firstAttribute="leading" secondItem="YM2-ju-jqG" secondAttribute="trailing" constant="-90" id="868-Y3-Bne"/>
-                            <constraint firstItem="ZPK-gK-Bge" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="9Eq-Sw-eiK"/>
                             <constraint firstItem="Ul4-Kq-sxD" firstAttribute="top" secondItem="Mf4-Na-Ras" secondAttribute="bottom" constant="10" id="9jh-aw-cDb"/>
+                            <constraint firstItem="8pR-ho-xll" firstAttribute="bottom" secondItem="4Nh-9r-EtD" secondAttribute="bottom" constant="19" id="Aw3-IJ-1Md"/>
                             <constraint firstItem="zrd-TR-dhd" firstAttribute="bottom" secondItem="YM2-ju-jqG" secondAttribute="bottom" id="CMV-2B-zuF"/>
-                            <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="wz3-qZ-PHL" secondAttribute="trailing" constant="16" id="FRG-Gd-zvF"/>
                             <constraint firstItem="ewc-Sj-lfR" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="IGi-hI-5NQ"/>
                             <constraint firstItem="vll-9g-eti" firstAttribute="top" secondItem="YM2-ju-jqG" secondAttribute="bottom" constant="26" id="MDo-Ka-Udy"/>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="4nf-S9-gG7" secondAttribute="trailing" constant="16" id="NkU-LF-EYI"/>
                             <constraint firstItem="vll-9g-eti" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="150" id="OLQ-BC-aBT"/>
                             <constraint firstItem="75r-gU-J82" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="drh-XA-bx2"/>
                             <constraint firstItem="Mf4-Na-Ras" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="fEG-cN-fgf"/>
-                            <constraint firstItem="8pR-ho-xll" firstAttribute="bottom" secondItem="ZPK-gK-Bge" secondAttribute="bottom" constant="25" id="jMb-de-pPU"/>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="ewc-Sj-lfR" secondAttribute="trailing" constant="16" id="jli-7T-RLC"/>
                             <constraint firstItem="Mf4-Na-Ras" firstAttribute="top" secondItem="YM2-ju-jqG" secondAttribute="bottom" constant="21" id="keE-68-c6G"/>
                             <constraint firstItem="4nf-S9-gG7" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="kee-Ik-HGE"/>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="bottom" secondItem="4nf-S9-gG7" secondAttribute="bottom" constant="15" id="moH-rh-Q0T"/>
-                            <constraint firstItem="wz3-qZ-PHL" firstAttribute="leading" secondItem="ZPK-gK-Bge" secondAttribute="trailing" constant="152" id="ndE-7L-Ga2"/>
                             <constraint firstItem="75r-gU-J82" firstAttribute="top" secondItem="YM2-ju-jqG" secondAttribute="bottom" constant="19" id="ndN-zh-Rdc"/>
                             <constraint firstItem="Ul4-Kq-sxD" firstAttribute="leading" secondItem="8pR-ho-xll" secondAttribute="leading" constant="16" id="oIY-pe-P8W"/>
                             <constraint firstItem="8pR-ho-xll" firstAttribute="trailing" secondItem="Ul4-Kq-sxD" secondAttribute="trailing" constant="16" id="q8t-nj-4bm"/>
@@ -415,8 +402,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="vll-9g-eti" id="UtZ-LR-inN"/>
                         <outlet property="buttonEditProfile" destination="4nf-S9-gG7" id="hdT-i3-kjW"/>
-                        <outlet property="buttonGCDProfile" destination="ZPK-gK-Bge" id="LIs-b7-b47"/>
-                        <outlet property="buttonOperationProfile" destination="wz3-qZ-PHL" id="PmG-h8-eog"/>
+                        <outlet property="buttonSaveCoreData" destination="4Nh-9r-EtD" id="MCc-jK-mgG"/>
                         <outlet property="buttonUploadProfilePhoto" destination="zrd-TR-dhd" id="bpw-AA-src"/>
                         <outlet property="descLabel" destination="Ul4-Kq-sxD" id="bKN-PC-7sB"/>
                         <outlet property="descTextField" destination="ewc-Sj-lfR" id="vBU-28-RBd"/>
