@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class Logger {
-   
+
     static var previousState = UIApplication.shared.applicationState
     class func printStateWithFunction(_ function: String) {
-   
+
         #if DEBUG
         let currentState = UIApplication.shared.applicationState
         print("Application moved from <\(previousState.parseToString())>, to <\(currentState.parseToString())>: \(function)\n")
@@ -22,21 +22,13 @@ class Logger {
         #else
         #endif
     }
-    
+
     class func printViewLifeCycle(_ function: String) {
-        
+
         #if DEBUG
         print("\(function)\n")
         #else
         #endif
     }
-    
+
 }
-
-
-
-    
-
-
-
-

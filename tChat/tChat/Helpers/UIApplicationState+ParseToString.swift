@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIApplication.State {
-    
+
     func parseToString() -> String {
         switch self {
         case .active:
@@ -21,5 +21,5 @@ extension UIApplication.State {
             return "Background"
         }
     }
-    
+
 }

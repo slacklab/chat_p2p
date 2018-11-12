@@ -12,40 +12,37 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
     let coreDataManager: CoreDataManager = CoreDataManager()
-    
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Logger.printStateWithFunction(#function)
         return true
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
         Logger.printStateWithFunction(#function)
     }
-    
+
     func applicationDidEnterBackground(_ application: UIApplication) {
         Logger.printStateWithFunction(#function)
     }
-    
+
     func applicationWillEnterForeground(_ application: UIApplication) {
         Logger.printStateWithFunction(#function)
     }
-    
+
     func applicationDidBecomeActive(_ application: UIApplication) {
         Logger.printStateWithFunction(#function)
     }
-    
+
     func applicationWillTerminate(_ application: UIApplication) {
             Logger.printStateWithFunction(#function)
-        
+
         if let saveContext = coreDataManager.coreDataStack.saveContext {
             coreDataManager.coreDataStack.performSave(context: saveContext)
         }
-        
-        
-    }
- 
-}
 
+    }
+
+}

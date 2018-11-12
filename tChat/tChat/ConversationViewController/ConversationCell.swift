@@ -14,11 +14,11 @@ protocol MessageCellConfiguration: class {
 }
 
 class MessageCell: UITableViewCell {
-    
+
     @IBOutlet private var textMessageLabel: UILabel!
-    
+
     var textMessage: String? {
-        didSet{
+        didSet {
             if let factTextMessage = textMessage {
                 textMessageLabel?.text = factTextMessage
             } else {
@@ -26,12 +26,11 @@ class MessageCell: UITableViewCell {
             }
         }
     }
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

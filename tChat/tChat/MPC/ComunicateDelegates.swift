@@ -8,19 +8,17 @@
 
 import Foundation
 
-protocol CommunicatorDelegate : class {
-    
+protocol CommunicatorDelegate: class {
+
     func didFoundUser(userId: String, userName: String?)
     func didLostUser(userId: String)
     func didReceiveMessage(text: String, fromUser: String, toUser: String)
     func failedToAdvertise(error: Error)
     func failedToBrowseUsers(error: Error)
-    
+
 }
 
-protocol CommunicationDelegate : class {
+protocol CommunicationDelegate: class {
     func updateUserData()
     func handleError(error: Error)
 }
-
-

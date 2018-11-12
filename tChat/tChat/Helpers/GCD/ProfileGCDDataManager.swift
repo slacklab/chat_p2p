@@ -9,13 +9,13 @@
 import Foundation
 
 class GCDProfileDataManager: ProfileDataManager {
-    
+
     private let dataHandler = ProfileDataHandler()
-    
-    func save(profileData: ProfileData, completion: ((Bool) -> ())? ) {
-        
+
+    func save(profileData: ProfileData, completion: ((Bool) -> Void)? ) {
+
         let queue = DispatchQueue.global(qos: .userInitiated)
-        
+
         queue.async { [weak self] in
             guard let dataHandler = self?.dataHandler else { return }
             let isSucceeded = dataHandler.save(profileData: profileData)
@@ -23,26 +23,26 @@ class GCDProfileDataManager: ProfileDataManager {
                 completion?(isSucceeded)
             }
         }
-        
+
     }
-    
-    func loadProfileData(completion: ((ProfileData) -> ())? ) {
-        
+
+    func loadProfileData(completion: ((ProfileData) -> Void)? ) {
+
         let queue = DispatchQueue.global(qos: .userInitiated)
-        
+
         queue.async { [self] in
             DispatchQueue.main.async {
                 completion?(self.dataHandler.loadProfileData())
             }
         }
-        
+
     }
-    
-    func getProfile(completion: @escaping (UserInfo) -> Void){
+
+    func getProfile(completion: @escaping (UserInfo) -> Void) {
         DispatchQueue(label: "com.tChat", qos: .userInitiated)
 .async {
             let name = UserDefaults.standard.string(forKey: "user_name") ?? ""
-    
+
             let profile = UserInfo(name: name)
             DispatchQueue.main.async {
                 completion(profile)

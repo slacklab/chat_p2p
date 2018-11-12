@@ -9,30 +9,26 @@
 import Foundation
 
 class CommunicationManager: CommunicatorDelegate {
-    
+
     static let shared = CommunicationManager()
     var dataManager = GCDProfileDataManager()
     var communicator: MultipeerCommunicator!
     weak var delegate: CommunicationDelegate?
-    
+
     private init() {
         dataManager.getProfile { (profile) in
             self.communicator = MultipeerCommunicator(profile: profile)
             self.communicator.delegate = self
         }
     }
-    
-        var conversationDictionary: [String : MessageManager] = [:]
 
-    
+        var conversationDictionary: [String: MessageManager] = [:]
+
     func didFoundUser(userId: String, userName: String?) {
         if let userConversation = conversationDictionary[userId] {
             userConversation.online = true
         } else {
             let userConversation = MessageManager(userID: userId, name: userName)
-           
-            
-            
 
             userConversation.online = true
             conversationDictionary[userId] = userConversation
@@ -42,7 +38,7 @@ class CommunicationManager: CommunicatorDelegate {
             delegate.updateUserData()
         }
     }
-    
+
     func didLostUser(userId: String) {
         if let userConversation = conversationDictionary[userId] {
             userConversation.online = false
@@ -53,7 +49,7 @@ class CommunicationManager: CommunicatorDelegate {
             delegate.updateUserData()
         }
     }
-    
+
     func didReceiveMessage(text: String, fromUser: String, toUser: String) {
         if let userConversation = conversationDictionary[fromUser] {
             _ = MessageManager.Message.incoming(text)
@@ -71,19 +67,18 @@ class CommunicationManager: CommunicatorDelegate {
         }
     }
 
-    
     func failedToBrowseUsers(error: Error) {
         guard let delegate = delegate else { return }
         DispatchQueue.main.async {
             delegate.handleError(error: error)
         }
     }
-    
+
     func failedToAdvertise(error: Error) {
         guard let delegate = delegate else { return }
         DispatchQueue.main.async {
             delegate.handleError(error: error)
         }
     }
-    
+
 }

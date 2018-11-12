@@ -9,10 +9,10 @@
 import Foundation
 
 protocol Communicator {
-    
-    func sendMessage(string: String, to userId: String, completionHandler: ((_ success: Bool, _ error: Error?) -> ())?)
+
+    func sendMessage(string: String, to userId: String, completionHandler: ((_ success: Bool, _ error: Error?) -> Void)?)
     var online: Bool {get set}
 
     var delegate: CommunicatorDelegate? {get set}
-    
+
 }

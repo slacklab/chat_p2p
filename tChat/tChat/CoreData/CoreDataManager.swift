@@ -13,28 +13,29 @@ class CoreDataManager {
     let coreDataStack = CoreDataStack()
 }
 
-
 extension CoreDataManager: ProfileDataManager {
-    
-    func save(profileData: ProfileData, completion: ((Bool) -> ())?) {
-        
+
+    func save(profileData: ProfileData, completion: ((Bool) -> Void)?) {
+
         guard let saveContext = coreDataStack.saveContext else { return }
-        
+
         saveContext.perform { [weak self] in
-            Profile.insertOrUpdateProfile(in: saveContext, name: profileData.name, desc: profileData.desc, image: profileData.image?.jpegData(compressionQuality: 1))
-            
+            Profile.insertOrUpdateProfile(in: saveContext, name: profileData.name,
+                                          desc: profileData.desc,
+                                          image: profileData.image?.jpegData(compressionQuality: 1))
+
             self?.coreDataStack.performSave(context: saveContext, completionHandler: { isSucceeded in
                 DispatchQueue.main.async {
                     completion?(isSucceeded)
                 }
             })
         }
-        
+
     }
-    
-    func loadProfileData(completion: ((ProfileData) -> ())?) {
-        
-        var profileData: ProfileData? = nil
+
+    func loadProfileData(completion: ((ProfileData) -> Void)?) {
+
+        var profileData: ProfileData?
         if let mainContext = coreDataStack.mainContext {
             if let profile = Profile.getProfilesList(in: mainContext).first {
                 let image = (profile.image == nil) ? nil : UIImage(data: profile.image!)
@@ -43,7 +44,7 @@ extension CoreDataManager: ProfileDataManager {
                                           image: image)
             }
         }
-        
+
         completion?(profileData ?? ProfileData(name: nil, desc: nil, image: nil))
     }
 }
